@@ -1,0 +1,132 @@
+*{box-sizing:border-box;}
+body
+{
+	background-color:#1b212c;
+}
+.ButtonDiv
+{
+	background-color:#4CAF50;
+	text-align:center;
+}
+
+.button
+{
+	border: none;
+	color: white;
+	padding: 15px 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button1
+{
+	background-color:#4CAF50;
+}
+
+.button1:hover
+{
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+h1
+{
+	color:white;
+	text-align:center;
+	font-size: 64px;
+	margin: 4px 4px;
+}
+h2,h3,h4,h5,h6 
+{
+	color:white;
+	text-align:center;
+	font-size: 32px;
+	margin: 4px 4px;
+}
+p
+{
+	color: white;
+}
+
+.maintext
+{
+	text-align:center;
+	font-size: 24px;
+}
+
+/*images*/
+.cursor
+{
+	cursor: pointer;
+}
+.ImgGallery /*the mainDiv class for images*/
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	position: relative; 
+	max-width: 800px;
+}
+.Images /*Div Class for the images themselves*/
+{
+	display:none;
+	position:relative;
+	text-align:center;/*centers the images*/
+}
+.CapCon
+{
+	height:auto;
+	width:100%;
+}
+.fadeout
+{
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+.CaptionText
+{
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5); 
+	width: 100%;
+	transition: .5s ease;
+	opacity:1;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+}
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+.column 
+{
+  float: left;
+  width: 16.66%;
+}
+.Thumbnail
+{
+	opacity:0.5;
+}
+.active, .Thumbnail:hover
+{
+	opacity: 1;
+}
+@-webkit-keyframes fade
+{
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade
+{
+  from {opacity: .4}
+  to {opacity: 1}
+}
