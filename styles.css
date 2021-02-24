@@ -3,33 +3,15 @@ body
 {
 	background-color:#1b212c;
 }
+html 
+{
+  scroll-behavior: smooth;
+}
+
 .ButtonDiv
 {
 	background-color:#4CAF50;
 	text-align:center;
-}
-
-.button
-{
-	border: none;
-	color: white;
-	padding: 15px 50px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 20px;
-	margin: 4px 2px;
-	cursor: pointer;
-}
-
-.button1
-{
-	background-color:#4CAF50;
-}
-
-.button1:hover
-{
-	background-color: rgba(0, 0, 0, 0.3);
 }
 
 h1
@@ -49,8 +31,42 @@ h2,h3,h4,h5,h6
 p
 {
 	color: white;
+	text-align:center;
 }
-
+.SidePanel
+{
+	height: 100%;
+	width: 160px;
+	position: fixed;
+	z-index: 1;
+	top:0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 20px;
+	transition: .5s ease;
+}
+.SidePanel a 
+{
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+}
+.SidePanel a:hover 
+{
+	color: #f1f1f1;
+}
+.main 
+{
+	margin-left: 160px; 
+	padding: 0px 10px;
+}
+@media screen and (max-height: 450px) 
+{
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 .maintext
 {
 	text-align:center;
