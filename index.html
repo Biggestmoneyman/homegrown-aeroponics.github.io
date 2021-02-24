@@ -6,86 +6,40 @@
 </head>
 <body>
 <!--heading of page-->
-<div>
-<img src="badabong.png" style="width:5%;position: absolute;margin-left:800;">
-<h1>Homegrown Aeroponics</h1>
+<div class="ButtonDiv">
+<!--<img src="badabong.png" style="width:5%;position: absolute;margin-left:800;"> no image-->
+<h1 id="topofpage">Homegrown Aeroponics</h1>
 <h2>Become Dependable</h2>
 </div>
 <!--heading of page-->
 
-<!--Menu Bar-->
-<div class="ButtonDiv">
-	<button class="button button1" onclick="window.location.href='index.html';">Home</button>
-	<button class="button button1" onclick="window.location.href='news.html';">News</button>
-	<button class="button button1" onclick="window.location.href='products.html';">Products</button>
-	<button class="button button1" onclick="window.location.href='aboutus.html';">About Us</button>
-	<button class="button button1" onclick="window.location.href='profile.html';">Profile</button>
-	<button class="button button1">Settings?</button>
+<div class="SidePanel">
+	<a href="#topofpage">Back to Top</a>
+	<a href="#Whatis">What is Homegrown?</a>
+	<a href="#Whyis">Why is Homegrown Needed?</a>
+	<a href="#futureof">Our Vision</a>
+	<a href="#aboutus">About Us</a>
 </div>
-<!--Menu Bar-->
-
-<!-- images-->
-<div class="ImgGallery">
-	<div Class="Images fadeout"> 
-		<img src="test1.png" class="CapCon">
-		<div class="CaptionText">test 1</div>
-	</div>
-	<div Class="Images fadeout">
-		<img src="test2.png" class="CapCon">
-		<div class="CaptionText">This is test 2</div>
-	</div>
-	<div Class="Images fadeout">
-		<img src="bop.jpg" class="CapCon">
-		<div class="CaptionText">A random image for testing</div>
-	</div>
-	
-	<div class="row">
-		<div class="column">
-			<img class="Thumbnail cursor" src="test1.png" style="width:80%" onclick="currentSlide(1)">
-		</div>
-		<div class="column">
-			<img class="Thumbnail cursor" src="test2.png" style="width:100%" onclick="currentSlide(2)">
-		</div>
-		<div class="column">
-			<img class="Thumbnail cursor" src="bop.jpg" style="width:100%" onclick="currentSlide(3)">
-		</div>
-	</div>
-</div>
-
-
-
-
-<div class="maintext">
-<p>This is the Main Page</p>
-<p>Will have an overview of the product and whatever else is wanted here.</p>
-<p></p>
-</div>
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("Images");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-} 
-</script>
+<br>
+<h2 id="Whatis">What is Homegrown?</h2>
+<p>here we will talk about the product<p>
+<p>mention how it works, what you can do<p>
+<p>who that product is for .etc.<p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p>have a link to actual store here(if we stay with github)</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h2 id="Whyis">Why is Homegrown needed</h2>
+<p>talk about decrease in arable land<p>
+<p>and all the other stuff we mentioned all the way back at the start of SCE<p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p>have a link to actual store here(if we stay with github)</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h2 id="futureof">Our Vision and Roadmap</h2>
+<p>self-explanatory from title<p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p>have a link to actual store here(if we stay with github)</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h2 id="aboutus">About us</h2>
+<p>you know what goes here 4head</p>
 </body>
 </html>
