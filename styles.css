@@ -1,7 +1,7 @@
-*{box-sizing:border-box;}
 body
 {
 	background-color:#1b212c;
+	margin:0;
 }
 html 
 {
@@ -12,38 +12,89 @@ html
 {
 	background-color:#4CAF50;
 	text-align:center;
+	margin-top:-4px;
+	transition: 1s ease;
+}
+.button
+{
+	background-color:#4CAF50;
+	border: none;
+	color: white;
+	padding: 5px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition: 1s ease;
+}
+
+.button:hover
+{
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.Area
+{
+	background-color:blue
+}
+.title
+{
+	color:white;
+	text-align: center;
+	font-size:64px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.subtitle
+{
+	color:white;
+	text-align: center;
+	font-size:32px;
+	margin-top: 4px;
+
 }
 
 h1
 {
 	color:white;
-	text-align:center;
 	font-size: 64px;
-	margin: 4px 4px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 h2,h3,h4,h5,h6 
 {
 	color:white;
-	text-align:center;
 	font-size: 32px;
 	margin: 4px 4px;
 }
 p
 {
 	color: white;
-	text-align:center;
+}
+.SideTextArea
+{
+	height: 100%;
+	width: 500px;
+	z-index: 1;
+	top:0;
+	padding-left:200px;
+	transition: 1s ease;
 }
 .SidePanel
 {
 	height: 100%;
-	width: 160px;
+	width: 180px;
 	position: fixed;
 	z-index: 1;
 	top:0;
+	left:0;
 	background-color: #111;
 	overflow-x: hidden;
 	padding-top: 20px;
-	transition: .5s ease;
+	transition: 1s ease;
 }
 .SidePanel a 
 {
