@@ -8,49 +8,26 @@ html
   scroll-behavior: smooth;
 }
 
-.ButtonDiv
+.Header
 {
 	background-color:#4CAF50;
 	text-align:center;
 	margin-top:-4px;
 	transition: 1s ease;
 }
-.button
-{
-	background-color:#4CAF50;
-	border: none;
-	color: white;
-	padding: 5px 5px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 20px;
-	margin: 4px 2px;
-	cursor: pointer;
-	transition: 1s ease;
-}
 
-.button:hover
-{
-	background-color: rgba(0, 0, 0, 0.3);
-}
-.Area
-{
-	background-color:blue
-}
 .title
 {
-	color:white;
 	text-align: center;
+	overflow-x: hidden;
 	font-size:64px;
 	margin-top: 4px;
 	margin-bottom: 4px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+
 }
 .subtitle
 {
-	color:white;
+	overflow-x: hidden;
 	text-align: center;
 	font-size:32px;
 	margin-top: 4px;
@@ -61,27 +38,55 @@ h1
 {
 	color:white;
 	font-size: 64px;
-	margin-top: 4px;
-	margin-bottom: 4px;
 }
 h2,h3,h4,h5,h6 
 {
 	color:white;
 	font-size: 32px;
-	margin: 4px 4px;
 }
 p
 {
 	color: white;
 }
-.SideTextArea
+
+.AreaBox
 {
 	height: 100%;
-	width: 500px;
-	z-index: 1;
-	top:0;
 	padding-left:200px;
 	transition: 1s ease;
+	z-index: 1;
+	top:0;
+	display:inline-block;
+	
+}
+.row:after
+{
+	content:"";
+	display:table;
+	clear:both;
+}
+.column
+{
+	float:left;
+	width:45%;
+	
+}
+
+.LeftArea
+{
+	width: 500px;
+}
+.RightImages
+{
+	height: 100%;
+	z-index: 1;
+	top:0;
+	padding-right:50px;
+	transition: 1s ease;
+	text-align:Right;
+	top:0;
+	
+
 }
 .SidePanel
 {
@@ -117,11 +122,6 @@ p
 {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
-.maintext
-{
-	text-align:center;
-	font-size: 24px;
 }
 
 /*images*/
@@ -167,17 +167,7 @@ p
 	font-size: 20px;
 	padding: 20px;
 }
-.row:after 
-{
-  content: "";
-  display: table;
-  clear: both;
-}
-.column 
-{
-  float: left;
-  width: 16.66%;
-}
+
 .Thumbnail
 {
 	opacity:0.5;
@@ -197,3 +187,5 @@ p
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
