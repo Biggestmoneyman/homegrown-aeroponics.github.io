@@ -2,6 +2,9 @@ body
 {
 	background-color:#1b212c;
 	margin:0;
+	font-family:"Tahoma";
+	background-image:url('backgroundattempt3.png');
+	background-size:cover;
 }
 html 
 {
@@ -47,6 +50,7 @@ h2,h3,h4,h5,h6
 p
 {
 	color: white;
+	font-size:16px
 }
 
 .AreaBox
@@ -76,17 +80,9 @@ p
 {
 	width: 500px;
 }
-.RightImages
+.AltColour
 {
-	height: 100%;
-	z-index: 1;
-	top:0;
-	padding-right:50px;
-	transition: 1s ease;
-	text-align:Right;
-	top:0;
-	
-
+	background-color:#44536f;
 }
 .SidePanel
 {
