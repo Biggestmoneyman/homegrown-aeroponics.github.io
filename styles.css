@@ -2,66 +2,75 @@ body
 {
 	background-color:#1b212c;
 	margin:0;
-	font-family:"Tahoma";
-	background-image:url('backgroundattempt3.png');
+	font-family:"Helvetic";
 	background-size:cover;
+	
+}
+div
+{
+	transition: 1s ease
 }
 html 
 {
   scroll-behavior: smooth;
 }
-
-.Header
+h3
 {
-	background-color:#4CAF50;
+	margin: 0px;
+}
+.Title
+{
+	font-size:72px;
+	margin-top:0px;
+	margin-bottom:8px;
+	padding-left:48px;
+	padding-right:48px;
+	color:white;
+}
+.Subtitle
+{
+	font-size:24px;
+	margin-top:7px;
+	margin-bottom:7px;
+	color:white;
+}
+.Page-Headers
+{
+	font-size:24px;
+	margin-top:0px;
+	margin-bottom:0px;
+	color:white;
+	padding-left:48px;
+	padding-right:48px;
+	overflow:hidden;
+}
+.column
+{
+	float:Left;
+	width:15%;
+}
+.BarVisual
+{
+	background-color:#808080;
+	padding-left:48px;
+	padding-right:48px;
+}
+
+.TopMenuBar
+{
+	font-size:18px;
+	color:white;
+	text-decoration: none;
+	float:right;
+	width:200px;
 	text-align:center;
-	margin-top:-4px;
-	transition: 1s ease;
+	margin:4px;
+	padding:6px 2px 6px 2px;
+	background-color:rgb(38, 115, 38);
 }
-
-.title
+.TopMenuBar:hover
 {
-	text-align: center;
-	overflow-x: hidden;
-	font-size:64px;
-	margin-top: 4px;
-	margin-bottom: 4px;
-
-}
-.subtitle
-{
-	overflow-x: hidden;
-	text-align: center;
-	font-size:32px;
-	margin-top: 4px;
-	padding-bottom: 8px;
-}
-
-h1
-{
-	color:white;
-	font-size: 64px;
-}
-h2,h3,h4,h5,h6 
-{
-	color:white;
-	font-size: 32px;
-}
-p
-{
-	color: white;
-	font-size:16px
-}
-
-.AreaBox
-{
-	height: 100%;
-	padding-left:200px;
-	transition: 1s ease;
-	z-index: 1;
-	top:0;
-	display:inline-block;
-	
+	background-color:#009900;
 }
 .row:after
 {
@@ -69,119 +78,88 @@ p
 	display:table;
 	clear:both;
 }
-.column
+.DivSplit
 {
-	float:left;
-	width:45%;
-	
+	float:Left;
+	width:50%;
 }
-
-.LeftArea
-{
-	width: 500px;
-}
-.AltColour
-{
-	background-color:#44536f;
-}
-.SidePanel
-{
-	height: 100%;
-	width: 180px;
-	position: fixed;
-	z-index: 1;
-	top:0;
-	left:0;
-	background-color: #111;
-	overflow-x: hidden;
-	padding-top: 20px;
-	transition: 1s ease;
-}
-.SidePanel a 
-{
-	padding: 6px 8px 6px 16px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-}
-.SidePanel a:hover 
-{
-	color: #f1f1f1;
-}
-.main 
-{
-	margin-left: 160px; 
-	padding: 0px 10px;
-}
-@media screen and (max-height: 450px) 
-{
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-/*images*/
-.cursor
-{
-	cursor: pointer;
-}
-.ImgGallery /*the mainDiv class for images*/
+.ImageContainer
 {
 	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	position: relative; 
-	max-width: 800px;
-}
-.Images /*Div Class for the images themselves*/
-{
-	display:none;
 	position:relative;
-	text-align:center;/*centers the images*/
-}
-.CapCon
-{
-	height:auto;
 	width:100%;
+	height:640px;
+	overflow:hidden;
 }
-.fadeout
+#ImageBase
 {
-	-webkit-animation-name: fade;
-	-webkit-animation-duration: 1.5s;
-	animation-name: fade;
-	animation-duration: 1.5s;
-}
-.CaptionText
-{
-	position: absolute;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.5); 
-	width: 100%;
-	transition: .5s ease;
-	opacity:1;
-	color: white;
-	font-size: 20px;
-	padding: 20px;
+	position:relative;
+	width:auto;
+	height:auto;
+	margin:0 auto;
 }
 
-.Thumbnail
+#ImageBase img.LeftSide
 {
-	opacity:0.5;
+	position:Absolute;
+	left:0px;
+	width:50%;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
 }
-.active, .Thumbnail:hover
+#ImageBase img.RightSide
 {
-	opacity: 1;
-}
-@-webkit-keyframes fade
-{
-	from {opacity: .4}
-	to {opacity: 1}
+	position:Absolute;
+	right:0px;
+	width:50%;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
 }
 
-@keyframes fade
+/*
+for 'n' images 
+a=presentation for 1 image 
+b=duration for cross fading
+total time -> t=(a+b)*n
+*/
+/*0%, (a/t)*100, (a+b)/t*100=(1/n)*(100)100-(b/t*100)100*/
+@keyframes ImageBaseFadeInOut 
 {
-  from {opacity: .4}
-  to {opacity: 1}
+	0% 
+	{
+		opacity:1;
+	}
+	45% 
+	{
+		opacity:1;
+	}
+	55% 
+	{
+		opacity:0;
+	}
+	100% 
+	{
+		opacity:0;
+	}
 }
 
-
+#ImageBase img.LeftTopImg 
+{
+	animation-name: ImageBaseFadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: alternate;
+}
+#ImageBase img.RightTopImg 
+{
+	animation-name: ImageBaseFadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: alternate;
+}
