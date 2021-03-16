@@ -90,6 +90,7 @@ h3
 	width:100%;
 	height:640px;
 	overflow:hidden;
+	cursor: pointer;
 }
 #ImageBase
 {
@@ -97,69 +98,27 @@ h3
 	width:auto;
 	height:auto;
 	margin:0 auto;
-}
+	cursor: pointer;
 
-#ImageBase img.LeftSide
+}
+#ImageBase img
 {
-	position:Absolute;
-	left:0px;
-	width:50%;
 	-webkit-transition: opacity 1s ease-in-out;
 	-moz-transition: opacity 1s ease-in-out;
 	-o-transition: opacity 1s ease-in-out;
 	transition: opacity 1s ease-in-out;
+}
+#ImageBase img.LeftSide
+{
+	position: Absolute;
+	left: 0px;
+	width: 50%;
+	cursor: pointer;	
 }
 #ImageBase img.RightSide
 {
 	position:Absolute;
-	right:0px;
-	width:50%;
-	-webkit-transition: opacity 1s ease-in-out;
-	-moz-transition: opacity 1s ease-in-out;
-	-o-transition: opacity 1s ease-in-out;
-	transition: opacity 1s ease-in-out;
-}
-
-/*
-for 'n' images 
-a=presentation for 1 image 
-b=duration for cross fading
-total time -> t=(a+b)*n
-*/
-/*0%, (a/t)*100, (a+b)/t*100=(1/n)*(100)100-(b/t*100)100*/
-@keyframes ImageBaseFadeInOut 
-{
-	0% 
-	{
-		opacity:1;
-	}
-	45% 
-	{
-		opacity:1;
-	}
-	55% 
-	{
-		opacity:0;
-	}
-	100% 
-	{
-		opacity:0;
-	}
-}
-
-#ImageBase img.LeftTopImg 
-{
-	animation-name: ImageBaseFadeInOut;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-duration: 10s;
-	animation-direction: alternate;
-}
-#ImageBase img.RightTopImg 
-{
-	animation-name: ImageBaseFadeInOut;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-duration: 10s;
-	animation-direction: alternate;
+	right: 0px;
+	width: 50%;
+	cursor: pointer;
 }
