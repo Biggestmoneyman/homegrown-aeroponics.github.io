@@ -11,39 +11,43 @@
 	<div class="row BarVisual">
 		<h2 class="Subtitle column ">Become Dependable</h2>
 		<a class="TopMenuBar column" onclick="">Link To Store</a>
-		<a class="TopMenuBar column" href="#aboutus">About the Team</a>
-		<a class="TopMenuBar column" href="#futureof">Our Vision</a>
-		<a class="TopMenuBar column" href="#Whyis">Why Are We Needed?</a>
-		<a class="TopMenuBar column" href="#Whatis">Who Are We?</a>
+		<a class="TopMenuBar column" href="#AboutUs">About the Team</a>
+		<a class="TopMenuBar column" href="#Vision">Our Vision</a>
+		<a class="TopMenuBar column" href="#WhyAreWe">Why Are We Needed?</a>
+		<a class="TopMenuBar column" href="#WhoAreWe">Who Are We?</a>
 	</div>
 </div>
 <div class="ImageContainer">
-	<div id="ImageBase"> 
-		<img class="LeftSide bottomimg" src="land.png">
-		<img class="LeftSide LeftTopImg" src="shovel.png">
+	<div id="ImageBase" onclick="LeftChange();"> 
+		<img id="Left3" class="LeftSide" src="land.png">
+		<img id="Left2" class="LeftSide" src="plan2.png">
+		<img id="Left1" class="LeftSide" src="plan1.png"><!--topmost image-->
 	</div>
-	<div id="ImageBase"> 
-		<img class="RightSide bottomimg" src="land.png">
-		<img class="RightSide RightTopImg" src="shovel.png">
+	<div id="ImageBase" onclick="RightChange();"> 
+		<img id="Right3" class="RightSide" src="land.png">
+		<img id="Right2" class="RightSide" src="shovel.png">
+		<img id="Right1" class="RightSide" src="gun.jpg"><!--topmost image-->
 	</div>
 </div>
-<div class="Page-Headers" id="Whatis">
+<div class="Page-Headers" id="WhoAreWe">
 <h3>Who Are We?</h3>
+<p id="demo1"></p>
+<p id="demo2"></p>
 <p>Homegrown is a benchtop aeroponics system designed to give the person the ability to grow their own fresh produce in a compact, easy to use and maintain system regardless of the user's experience with home growing.</p>
 <p> The system works by using a water-based nutrient mix pumped through an atomiser to mistify and spray the mix onto the plant roots. This, combined with additional oxygen from the roots being suspended in the air increases growth rate, decreases water usage and reduces pathogens forming on the plants.</p>
 <p>Homegrown also eliminates the need for pesticides and herbicides that are all too common in our supermarket brought foods.</p>
 </div>
-<div class="Page-Headers" id="Whyis">
+<div class="Page-Headers" id="WhyAreWe">
 <h3>Why are We Needed?</h3>
 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 <p>Section 1.10.32 of "de Finibus Bonoru</p>
 </div>
-<div class="Page-Headers" id="futureof">
+<div class="Page-Headers" id="Vision">
 <h3>Our Vision and Roadmap</h3>
 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 <p>Section 1.10.32 of "de Finibus Bonoru</p>
 </div>
-<div class="Page-Headers" id="aboutus">
+<div class="Page-Headers" id="AboutUs">
 <h3>About Us</h3>
 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 <p>Section 1.10.32 of "de Finibus Bonoru</p>
@@ -51,3 +55,52 @@
 </body>
 </html>
 
+<script>
+var i=0;
+var j=0;
+function LeftChange()
+{
+	i=i+1;
+	switch(i)
+	{
+	case i=1:
+		document.getElementById("Left1").style.opacity = 0;
+		setTimeout(()=> document.getElementById("Left1").style.display = "none",1000)
+	break;
+	case i=2:	
+		document.getElementById("Left2").style.opacity = 0;
+		setTimeout(()=> document.getElementById("Left2").style.display = "none",1000)
+	break;
+	case i=3:
+		document.getElementById("Left2").style.display = "block";
+		document.getElementById("Left1").style.display = "block";
+		setTimeout(()=> document.getElementById("Left2").style.opacity = 1,150)
+		setTimeout(()=> document.getElementById("Left1").style.opacity = 1,150)
+		i=0;
+	break;
+	}
+}
+function RightChange()
+{
+	j=j+1;
+	switch(j)
+	{
+	case j=1:
+		document.getElementById("Right1").style.opacity = 0;
+		setTimeout(()=> document.getElementById("Right1").style.display = "none",1000)
+	break;
+	case j=2:	
+		document.getElementById("Right2").style.opacity = 0;
+		setTimeout(()=> document.getElementById("Right2").style.display = "none",1000)
+	break;
+	case j=3:
+		document.getElementById("Right2").style.display = "block";
+		document.getElementById("Right1").style.display = "block";
+		setTimeout(()=> document.getElementById("Right2").style.opacity = 1,150)
+		setTimeout(()=> document.getElementById("Right1").style.opacity = 1,150)
+		j=0;
+	break;
+	}
+}
+
+</script> 
